@@ -1,11 +1,14 @@
 // import mongoose from mongoose;
+import "./env.js"
+
+
 import ConnectDB from "../db/index.js";
-import { configDotenv } from "dotenv";
 import { app } from "./app.js";
 
 
-configDotenv();
 
+// console.log("process.env.PORT: ",process.env.PORT)
+// console.log("process.env.CLOUDINARY_API_KEY: ",process.env.CLOUDINARY_API_KEY)
 
 ConnectDB()
 .then(()=>{
